@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> SargamSphere</title>
+  <link rel="shortcut icon" href="{% static 'img/logo/favicon.ico' %}">
+  <link rel="stylesheet" href={% static "css/rockballad.css" %}></link>
+</head>
+<body>
+  <header>
+    <h1>My Awesome Playlist</h1>
+  </header>
+  <div class="container">
+    <h2 class="playlist-header">Songs</h2>
+    <div class="songList">
+        <ul>
+        
+        </ul>
+    </div>
+    <!-- Repeat the song div structure for more songs -->
+  </div>
+  <!-- Seekbar container -->
+  <div class="playBar">
+    <div class="seekbar">
+        <div class="circle">
+
+        </div>
+    </div>
+    <div class="aboveBar">
+        <div class="songInfo">
+        </div>
+        <div class="songButtons">
+            <img class="button" id="previous" src="{% static 'img/backward.svg' %}" alt="">
+            <img class="button" id="play"     src="{% static 'img/play-circle.svg' %}" alt="">
+            <img class="button" id="forward"  src="{% static 'img/forward.svg' %}" alt="">
+        </div>
+        <div class="songTime"></div>
+    </div>
+</div>
+</body>
+</html>

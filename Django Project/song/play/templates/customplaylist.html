@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    {% load static %}
+<head>
+    <title>Custom Playlist</title>
+    <style>
+        
+        body {
+            background-color: black; /* Set background color to black */
+            color: white; /* Set font color to white */
+            font-family: Arial, sans-serif; /* Set font family */
+            padding: 20px;
+        }
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px; /* Increased gap between images */
+        }
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            padding: 10px;
+            animation: illuminate 2s infinite alternate; /* Apply the illumination animation */
+        }
+        @keyframes illuminate {
+            0% {
+                box-shadow: 0 0 10px red; /* Start with a small glow */
+            }
+            100% {
+                box-shadow: 0 0 20px red; /* Increase glow to give an illuminating effect */
+            }
+        }
+        .image-container img {
+            width: 200px;
+            height: 200px;
+            border: 2px solid red; /* Set red border around the images */
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .image-container img:hover {
+            transform: scale(1.1);
+        }
+        .image-container p {
+            margin-top: 10px;
+            color: red; /* Set title color to red */
+            font-weight: bold; /* Set title font weight to bold */
+            font-size: large;
+        }
+        .image-link {
+            text-decoration: none; /* Remove underline from the link */
+            color: inherit; /* Inherit color from the parent element */
+        }
+    </style>
+</head>
+<body>
+    <div class="image-gallery">
+        <div class="image-container">
+            <a href="rockshow" class="image-link">
+                <img src='{% static "img/playlist/rupam.jpg" %}' alt="Rupam">
+                <p>Rupam Islam Hits</p>
+            </a>
+        </div>
+        <div class="image-container">
+            <a href="kkshow" class="image-link">
+                <img src='{% static "img/playlist/KK.jpeg" %}' alt="kk">
+                <p>KK Hits</p>
+            </a>
+        </div>
+        <div class="image-container">
+            <a href="userplaylistshow" class="image-link">
+                <img src='{% static "img/playlist/add.jpeg" %}' alt="add">
+                <p>User's Choice</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

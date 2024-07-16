@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto", sans-serif;
+}
+ /* Basic styles to mimic Spotify's layout */
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  header {
+    background-color: #1e3ee7c4;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .playlist-header {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .song {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  .song img {
+    width: 64px;
+    height: 64px;
+    margin-right: 10px;
+  }
+  .song-details {
+    flex: 1;
+  }
+  .song-title {
+    font-weight: bold;
+  }
+  .song-artist {
+    color: #888;
+  }
+  /* Style for seekbar container */
+  .playBar{
+    position: fixed;
+    bottom: 0;
+    background-color: rgba(79, 104, 233,0.8);
+    width: 98%;
+    padding: 14px;
+    border-radius: 1vw;
+    height: 46px;
+    padding-right: 16px;
+}
+.songButtons{
+	position: relative;
+	margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.songButtons .button {
+    width: 60px;
+    height: 41px;
+}
+.songButtons img{
+	cursor: pointer;
+    fill: white;
+}
+.playNow {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 13px;
+}
+
+
+.playNow span {
+    font-size: 15px;
+}
+
+.playNow img {
+	width: 33px;
+    height: 30px;
+}
+
+.seekbar{
+	height: 4px;
+	width: 100%;
+	background:  white;
+	position: relative;
+	border-radius: 1vw;
+	cursor: pointer;
+}
+.circle{
+	width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: white;
+	position: relative;
+    top: -8px;
+    left: -2px;
+	cursor: pointer;
+	transition: left 0.5s;
+}
+
+.aboveBar{
+	display: flex;
+	justify-content: space-between;
+}
+  
+.songInfo, .songTime{
+	padding: 12px 43px;
+}
